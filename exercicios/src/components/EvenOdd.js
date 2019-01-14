@@ -6,9 +6,9 @@ export default class EvenOdd extends React.Component{
     render (){
         return(
             <View>
-                this.props.number % 2 == 0
-                ? <Text style={Standard}>Par</Text>
-                : <Text style={Standard}>Impar</Text>;
+                {this.props.number % 2 == 0
+                ? <Text style={Standard.ex}>Par</Text>
+                : <Text style={Standard.ex}>Impar</Text>}
             </View>
             
         )

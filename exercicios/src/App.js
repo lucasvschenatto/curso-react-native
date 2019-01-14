@@ -2,13 +2,19 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import Simple from './components/Simple';
 import EvenOdd from './components/EvenOdd';
+import Invert, { Hi, MegaSena, functionThree } from './components/Multi';
 export default class App extends Component{
   render(){
     return (
       <View style={styles.container}>
+
         <Text style={styles.f20}>App!!!</Text>
         <Simple customText ='texto customizado'/>
         <EvenOdd number = '3'/>
+        <Invert text='React Native!'/>
+        <MegaSena numbers={5}></MegaSena>
+        <Hi/>
+        <Text>{functionThree()}</Text>
       </View>
     )
   }
