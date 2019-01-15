@@ -8,8 +8,13 @@ import Platform from './components/Platform';
 import ValidateProps from './components/ValidateProps'
 import Event from './components/Event'
 import GrandFather from './components/DirectCommunication'
+import SyncronizedText from './components/IndirectCommunication'
 
 export default createDrawerNavigator({
+    IndirectCommunication: {
+        screen: SyncronizedText,
+        navigationOptions: {title: 'Indirect Communication'}
+    },
     DirectCommunication: {
         screen: () => <GrandFather name='Bob' lastName='Silva'/>,
         navigationOptions: {title: 'Direct Communication'}

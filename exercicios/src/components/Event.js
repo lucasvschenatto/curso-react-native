@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {View, Text, TextInput} from 'react-native'
-import Standard from '../stile/Standard'
+import Standard from '../style/Standard'
 
 class Event extends Component{
     state = {

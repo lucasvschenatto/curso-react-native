@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import Standard from '../stile/Standard';
+import Standard from '../style/Standard';
 export default class Simple extends React.PureComponent{
     render(){
         return (
