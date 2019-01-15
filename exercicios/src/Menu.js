@@ -10,8 +10,12 @@ import Event from './components/Event'
 import GrandFather from './components/DirectCommunication'
 import SyncronizedText from './components/IndirectCommunication'
 import FlexList from './components/FlexList'
+import Flex from './components/Flex'
 
 export default createDrawerNavigator({
+    Flex:{
+        screen: Flex,
+    },
     FlexList:{
         screen: FlexList,
         navigationOptions:{title: 'Flex List'}
