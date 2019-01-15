@@ -7,8 +7,13 @@ import Counter from './components/Counter';
 import Platform from './components/Platform';
 import ValidateProps from './components/ValidateProps'
 import Event from './components/Event'
+import GrandFather from './components/DirectCommunication'
 
 export default createDrawerNavigator({
+    DirectCommunication: {
+        screen: () => <GrandFather name='Bob' lastName='Silva'/>,
+        navigationOptions: {title: 'Direct Communication'}
+    },
     Event: {
         screen: Event
     },
