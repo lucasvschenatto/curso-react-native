@@ -4,8 +4,12 @@ import Simple from './components/Simple';
 import EvenOdd from './components/EvenOdd';
 import Invert, { Hi, MegaSena, functionThree } from './components/Multi';
 import Counter from './components/Counter';
+import Platform from './components/Platform';
 
 export default createDrawerNavigator({
+    Platform:{
+        screen: () => <Platform/>
+    },
     Counter: {
         screen: () => <Counter initialNumber={15}/>
     },
