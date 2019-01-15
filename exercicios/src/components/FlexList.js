@@ -28,7 +28,11 @@ const itemStyle = {
     height: 50,
     backgroundColor: '#DDD',
     borderWidth: 0.5,
-    borderColor: '#222'
+    borderColor: '#222',
+    // Flex
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    flexDirection: 'row'
 }
 
 class Student extends React.Component{
