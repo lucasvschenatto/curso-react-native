@@ -6,8 +6,12 @@ import Invert, { Hi, MegaSena, functionThree } from './components/Multi';
 import Counter from './components/Counter';
 import Platform from './components/Platform';
 import ValidateProps from './components/ValidateProps'
+import Event from './components/Event'
 
 export default createDrawerNavigator({
+    Event: {
+        screen: Event
+    },
     ValidateProps:{
         // screen: Hi,
         screen: () => <ValidateProps label = 'labeleeee' year={190} />,
