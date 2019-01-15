@@ -36,9 +36,6 @@ const itemStyle = {
 }
 
 class Student extends React.Component{
-    constructor(props){
-        super(props);
-    }
     render(){
         return <View style={itemStyle}>
             <Text>Name: {this.props.name}</Text>
