@@ -9,8 +9,13 @@ import ValidateProps from './components/ValidateProps'
 import Event from './components/Event'
 import GrandFather from './components/DirectCommunication'
 import SyncronizedText from './components/IndirectCommunication'
+import FlexList from './components/FlexList'
 
 export default createDrawerNavigator({
+    FlexList:{
+        screen: FlexList,
+        navigationOptions:{title: 'Flex List'}
+    },
     IndirectCommunication: {
         screen: SyncronizedText,
         navigationOptions: {title: 'Indirect Communication'}
