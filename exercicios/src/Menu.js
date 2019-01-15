@@ -5,8 +5,14 @@ import EvenOdd from './components/EvenOdd';
 import Invert, { Hi, MegaSena, functionThree } from './components/Multi';
 import Counter from './components/Counter';
 import Platform from './components/Platform';
+import ValidateProps from './components/ValidateProps'
 
 export default createDrawerNavigator({
+    ValidateProps:{
+        // screen: Hi,
+        screen: () => <ValidateProps label = 'labeleeee' year={190} />,
+        navigationOptions: {title: 'Validate Props'}
+    },
     Platform:{
         screen: () => <Platform/>
     },
