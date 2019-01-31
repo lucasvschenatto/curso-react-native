@@ -1,0 +1,10 @@
+{
+    "files.watcherExclude": {
+        "**/android/**": true,
+        "**/ios/**": true
+    },
+    "files.exclude": {
+        "**/android/**": true,
+        "**/ios/**": true
+    }
+}
