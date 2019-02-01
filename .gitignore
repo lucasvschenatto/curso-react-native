@@ -59,3 +59,7 @@ buck-out/
 
 # Cod3r project
 cod3rcursos/
+
+# React native
+android/*
+ios/*
