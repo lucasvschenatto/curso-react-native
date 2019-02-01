@@ -56,3 +56,6 @@ buck-out/
 *.jsbundle
 # Lock files
 *lock.json
+
+# Cod3r project
+cod3rcursos/
