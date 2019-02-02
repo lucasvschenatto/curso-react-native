@@ -5,10 +5,10 @@ class Flag extends React.Component{
     render(){
         return (
             <View style={styles.container}>
-                <View style={styles.flagpole} />
-                <View style={styles.flag} />
-                <View style={styles.base1} />
-                <View style={styles.base2} />
+                <View style={[styles.flagpole, this.props.bigger ? styles.flagpoleBigger : null]} />
+                <View style={[styles.flag, this.props.bigger ? styles.flagBigger : null]} />
+                <View style={[styles.base1, this.props.bigger ? styles.baseBigger1 : null]} />
+                <View style={[styles.base2, this.props.bigger ? styles.baseBigger2 : null]} />
             </View>
         )
     }
@@ -47,6 +47,36 @@ const styles = StyleSheet.create({
         backgroundColor: '#222',
         marginLeft: 5,
         marginTop: 12
+    },
+    flagpoleBigger:{
+        position:'absolute',
+        height: 28,
+        width: 4,
+        backgroundColor: '#222',
+        marginLeft: 16
+    },
+    flagBigger:{
+        position: 'absolute',
+        height: 10,
+        width: 14,
+        backgroundColor: '#F22',
+        marginLeft: 3
+    },
+    baseBigger1:{
+        position: 'absolute',
+        height: 4,
+        width: 12,
+        backgroundColor: '#222',
+        marginLeft: 12,
+        marginTop: 20
+    },
+    baseBigger2:{
+        position: 'absolute',
+        height: 4,
+        width: 20,
+        backgroundColor: '#222',
+        marginLeft: 8,
+        marginTop: 24
     }
 })
 
