@@ -11,7 +11,10 @@ class MineField extends React.Component{
                 )
             })
             return (
-                <View key={r}>
+                <View
+                    style={{flexDirection:'row'}}
+                    key={r}
+                    >
                     {fields}
                 </View>
             )
@@ -26,7 +29,7 @@ class MineField extends React.Component{
 
 const styles = StyleSheet.create({
     container: {
-        flexDirection: 'row',
+        flexDirection: 'column',
         backgroundColor: '#EEE',
     }
 })
