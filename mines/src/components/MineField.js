@@ -9,7 +9,8 @@ class MineField extends React.Component{
                 return (
                     <Field
                         {...field}
-                        onOpen={() => this.props.onOpenField(r,c )}
+                        onOpen={() => this.props.onOpenField(r, c)}
+                        onSelect={() => this.props.onSelectField(r, c)}
                         key={c}
                         />
                 )

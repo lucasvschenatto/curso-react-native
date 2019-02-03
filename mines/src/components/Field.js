@@ -31,6 +31,7 @@ class Field extends React.Component{
         return(
             < TouchableWithoutFeedback
                 onPress={this.props.onOpen}
+                onLongPress={this.props.onSelect}
                 >
                 <View style={styleField}>
                     {!mined && opened && nearMines > 0 ?
