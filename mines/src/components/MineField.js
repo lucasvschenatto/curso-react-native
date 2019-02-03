@@ -7,7 +7,11 @@ class MineField extends React.Component{
         const rows = this.props.board.map( (row, r) => {
             const fields = row.map( (field, c) => {
                 return (
-                    <Field {...field} key={c}/>
+                    <Field
+                        {...field}
+                        onOpen={() => this.props.onOpenField(r,c )}
+                        key={c}
+                        />
                 )
             })
             return (

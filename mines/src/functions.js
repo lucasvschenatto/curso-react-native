@@ -63,7 +63,7 @@ const getNeighbors = (board, row, column) => {
 const safeNeighborhood = (board, row, column) => {
     const safes = (result, neighbor) => result && !neighbor.mined
     const neighbors = getNeighbors(board, row, column)
-    return neighbors.reduce(safes, false)
+    return neighbors.reduce(safes, true)
 }
 
 const openField = (board, row, column) => {
@@ -72,11 +72,12 @@ const openField = (board, row, column) => {
         field.opened = true
         if (field.mined) {
             field.exploded = true
-        } else if (safeNeighborhood(board, row, column)){
-            getNeighbors(board, row, column)   
+        } else if (safeNeighborhood(board, row, column)) {
+            getNeighbors(board, row, column)
+                .forEach(n => openField(board, n.row, n.column))
         } else {
             const neighbors = getNeighbors(board, row, column)
-            field.nearMines = neighbors.filter( n => n.mined ).length
+            field.nearMines = neighbors.filter(n => n.mined).length
         }
     }
 }
@@ -84,8 +85,7 @@ const openField = (board, row, column) => {
 const fields = board => [].concat(...board)
 
 const hadExplosion = board => {
-    return fields(board)
-    .filter(field => field.exploded) > 0
+    return fields(board).some(field => field.exploded)
 }
 
 const pending = field => {
@@ -96,7 +96,7 @@ const pending = field => {
 const wonGame = board => !fields(board).some(pending)
 
 const showMines = board =>{
-    fields(board).filter(field => mined)
+    fields(board).filter(field => field.mined)
     .forEach(field => field.opened = true)
 }
 
